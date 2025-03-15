@@ -84,6 +84,7 @@ footer{
     background-color: black;
     flex-direction:column;
     text-align: center;
+    align-content: center;
 }
 
 footer img{
