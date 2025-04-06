@@ -10,21 +10,19 @@
 <body>
     <main>
         <a href="index.html"><img src="img/icon.png" alt="Logo da turma S3 rede N1"></a>
-            <form action="" method="post">
-                <h1>Nome:</h1>
-                <label for="name"></label>
-                <input type="text" placeholder="Digite o seu nome completo" autofocus="true">
+            <form action="registro.php" method="post">
 
-                <h1>E-mail:</h1>
-                <label for="E-mail"></label>
-                <input type="email" placeholder="Digite seu E-mail"/>
+                <label for="name">Nome:</label>
+                <input type="text" name="nome" placeholder="Digite o seu nome completo" required >
 
-                <h1>Senha:</h1>
-                <label for="password"></label>
-                <input type="password" placeholder="Digite a sua senha"/>
+                <label for="E-mail">E-mail:</label>
+                <input type="email" name="e-mail" placeholder="Digite seu E-mail" required/>
+
+                <label for="password">Senha:</label>
+                <input type="password" name="senha" placeholder="Digite a sua senha" required/>
+                <a href="index.html"><button type="submit">Cadastrar</button></a>
             </form>
         
-            <a href="index.html"><button>Cadastrar</button></a>
     </main>
 
     <footer>

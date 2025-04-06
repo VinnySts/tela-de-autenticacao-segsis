@@ -36,39 +36,18 @@ img{
     width: 200px;
 }
 
-div{
-    margin-top: 5px;
-    padding-top: 10px;
+form{
+    display:flex;
+    align-items: center; 
+    align-content: center;
     flex-direction: column;
-    justify-content: center;
-    color: white;
-}
-
-
-div a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-div a:visited{
-    text-decoration: none;
-}
-
-div a:hover{
-    text-decoration: none;
-    color:rgb(0, 102, 255);
-}
-
-h1{
-    color: white;
-    margin-top: 15px;
 }
 
 label{
     width: 225px;
     height: 15px;
-    background-color: white;
     border-radius: 5px;
+    margin-top: 15px;
     color: rgb(255, 255, 255);
 }
 
@@ -135,4 +114,5 @@ p{
 .isaias{
     width: 70px;
     border-radius: 5px;
+    bottom: 2px;
 }
