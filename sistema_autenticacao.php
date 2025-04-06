@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "usuarios_db"; // nome do seu banco de dados
+$db = "sistema_autenticacao"; // nome correto do banco
 
 $conn = new mysqli($host, $user, $pass, $db);
 
@@ -13,17 +13,18 @@ if ($conn->connect_error) {
 }
 
 // Pega os dados do formulário
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Criptografa a senha
+$username = $_POST['nome'];
+$email = $_POST['e-mail'];
+$password = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
 // Insere no banco
-$sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)";
+$sql = "INSERT INTO usuarios (username, email, password) VALUES (?, ?, ?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("sss", $nome, $email, $senha);
+$stmt->bind_param("sss", $username, $email, $password);
 
 if ($stmt->execute()) {
-    echo "Usuário registrado com sucesso!";
+    header("Location: login.html");
+    exit(); 
 } else {
     echo "Erro ao registrar: " . $stmt->error;
 }

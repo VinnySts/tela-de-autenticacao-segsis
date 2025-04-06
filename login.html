@@ -9,17 +9,19 @@
 </head>
 <body>
     <main>
-        <a href="index.html"><img src="img/icon.png" alt="Logo da turma S3 rede N1"></a>
-            <form action="registro.php" method="POST">
-                <label for="user">Login:</label>
-                <input type="text" placeholder="Digite o seu usuário" autofocus="true">
+        <a href="login.html"><img src="img/icon.png" alt="Logo da turma S3 rede N1"></a>
+            <form action="login.php" method="POST">
+                <label for="name">Nome:</label>
+                <input type="text" name="nome" placeholder="Digite o seu nome completo" required >
 
                 <label for="password">Senha:</label>
-                <input type="password" placeholder="Digite sua senha"/>
+                <input type="password" name="senha" placeholder="Digite a sua senha" required/>
+
+                <button type="submit">Entrar</button>
             </form>
         
-        <div class="sign-in"><a href="cadastro.html" target="_blank">Cadastre-se</a></div>
-        <div class="forget"><a href="esquece.html" target="_blank">Esqueceu a senha?</a></div>
+        <div class="sign-in"><a href="register.html">Cadastre-se</a></div>
+        <!--<div class="forget"><a href="forget.html">Esqueceu a senha?</a></div>-->
     </main>
 
     <footer>
