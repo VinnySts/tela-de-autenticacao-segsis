@@ -3,7 +3,7 @@ session_start();
 
 // Verifica se o usuário está logado
 if (!isset($_SESSION['usuario'])) {
-    header("Location: login.html");
+    header("Location: index.html");
     exit();
 }
 ?>
@@ -20,7 +20,7 @@ if (!isset($_SESSION['usuario'])) {
 <body>
 <body>
     <main>
-        <a href="login.html"><img src="img/icon.png" alt="Logo da turma S3 rede N1"></a>
+        <a href="index.html"><img src="img/icon.png" alt="Logo da turma S3 rede N1"></a>
         <h1 class="welcome">Bem-vindo, <?php echo $_SESSION['usuario']; ?>!</h1>
         <p>Seu login foi realizado com sucesso.</p>
     <a href="logout.php"><button>Logoff</button></a>

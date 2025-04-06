@@ -23,7 +23,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("sss", $username, $email, $password);
 
 if ($stmt->execute()) {
-    header("Location: login.html");
+    header("Location: index.html");
     exit(); 
 } else {
     echo "Erro ao registrar: " . $stmt->error;
