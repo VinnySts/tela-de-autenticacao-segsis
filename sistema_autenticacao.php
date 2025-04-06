@@ -23,8 +23,10 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("sss", $username, $email, $password);
 
 if ($stmt->execute()) {
-    header("Location: index.html");
-    exit(); 
+    echo "<script>
+    alert('✅ Cadastro realizado com sucesso!');
+    window.location.href = 'index.html'; // troque se seu login for .php
+</script>";
 } else {
     echo "Erro ao registrar: " . $stmt->error;
 }
